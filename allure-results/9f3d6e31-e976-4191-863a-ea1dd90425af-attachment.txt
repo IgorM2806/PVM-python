@@ -1,0 +1,6 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache
+[32mINFO    [0m utilities.logger:test_publications_page.py:154 Running the test 'test_displaying_list_publications'
+[32mINFO    [0m utilities.logger:test_publications_page.py:159 The Test 'test_displaying_list_publications' was successful!

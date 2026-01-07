@@ -1,0 +1,6 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache
+[32mINFO    [0m utilities.logger:test_home_page.py:46 We check the presence of the logo on the main page.
+[32mINFO    [0m utilities.logger:test_home_page.py:50 The logo is displayed on the main page!

@@ -1,0 +1,8 @@
+[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache
+[32mINFO    [0m utilities.logger:test_consultation_request_form_home_page.py:230 Test Execution 'test_limitation_re_sending' with values name: Tester, email: 1111@mail.ru, messages: Test
+[32mINFO    [0m utilities.logger:test_consultation_request_form_home_page.py:233 Первая успешная отправка формы.
+[32mINFO    [0m utilities.logger:test_consultation_request_form_home_page.py:241 Попытка повторной отправки формы сразу после успешной первой попытки.
+[32mINFO    [0m utilities.logger:test_consultation_request_form_home_page.py:256 Test 'test_limitation_re_sending' was successful!
