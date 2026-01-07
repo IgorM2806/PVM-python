@@ -1,0 +1,79 @@
+# Исключаем артефакты сборки и временные файлы
+*.pyc
+__pycache__/
+*.egg-info
+*.so
+*.o
+*.obj
+
+# Исключение виртуальных сред
+venv/
+.venv/
+virtualenv/
+
+# Конфигурационные файлы IDEA
+.idea/
+.DS_Store
+*.iml
+.outline
+.idea.workspace.xml
+.idea.tasks.xml
+.idea.caches/
+.idea.libraries/
+.idea.compiler.xml
+.idea.misc.xml
+.idea.modules.xml
+.idea.vcs.xml
+.idea.userdata
+.idea.scratches
+.idea.shelves
+.idea.system/
+.idea.logs/
+.idea.backups/
+
+# Лог-файлы и кэшированные файлы
+logs/
+tmp/
+temp/
+.cache/
+
+# Результаты тестов и документация
+coverage.xml
+htmlcov/
+.noseids
+*.log
+*.sqlite3
+*.sqlite
+docs/build/
+
+# Атрибуты Jenkins и Travis CI
+jenkins_result.xml
+.travis.yml
+
+# Файлы специфичные для Selenium WebDriver
+chromedriver*
+geckodriver*
+IEDriverServer*
+MicrosoftWebDriver*
+
+# Исключаем отчет Allure
+allure-results/
+allure-report/
+
+# Другое
+Thumbs.db
+.egg
+.env
+.env.*
+local_settings.py
+.envrc
+.local
+.nojesel
+.npmrc
+.idea_modules
+.nyc_output
+coverage/*
+npm-debug.log*
+yarn-error.log*
+*.tgz
+node_modules/
