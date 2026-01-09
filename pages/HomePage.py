@@ -34,6 +34,9 @@ class HomePage:
     def get_title(self):
         return self.driver.title
 
+    def get_current_url(self):
+        return self.driver.current_url
+
     def fill_form_and_submit(self, name, email, message):
         """
         Заполняет форму и отправляет её.
@@ -185,6 +188,12 @@ class HomePage:
         blog_subject_span = (WebDriverWait(self.driver, 5)
                              .until(EC.visibility_of_element_located(self.element_blog_subject_span)).text)
         return blog_subject, blog_subject_span
+
+    def click_element_intro_button(self, locator):
+        element_click = (WebDriverWait(self.driver, 5)
+                                .until(EC.visibility_of_element_located(locator)))
+        self.driver.execute_script("arguments[0].scrollIntoView();", element_click)
+        element_click.click()
 
 
 

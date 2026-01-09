@@ -1,6 +1,0 @@
-[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
-[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
-[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
-[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache
-[32mINFO    [0m utilities.logger:test_publications_page.py:30 Running the test 'test_publications_page_title'
-[32mINFO    [0m utilities.logger:test_publications_page.py:38 The page title value: 'Все публикации' is valid.

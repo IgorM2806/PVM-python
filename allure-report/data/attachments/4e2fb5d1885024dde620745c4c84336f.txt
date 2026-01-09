@@ -1,6 +1,0 @@
-[32mINFO    [0m WDM:logger.py:11 ====== WebDriver manager ======
-[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
-[32mINFO    [0m WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
-[32mINFO    [0m WDM:logger.py:11 Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/chromedriver.exe] found in cache
-[32mINFO    [0m utilities.logger:test_home_page.py:186 We are checking the display of the 'Request for consultation' block header!
-[32mINFO    [0m utilities.logger:test_home_page.py:191 The test 'test_application_block_text' was successful

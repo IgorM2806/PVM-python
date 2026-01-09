@@ -35,11 +35,84 @@ class TestMainMenu:
 
         try:
             assert "About me" in homepage.get_title(), f"Переход не на ту страницу!"
+            logger.info("Test 'test_main_menu_about_me' was successful!")
         except AssertionError as e:
-            logger.error(f"Test failed with error: {e}")
+            logger.error(f"Test 'test_main_menu_about_me' failed with error: {e}")
             raise
 
-        logger.info("Test 'test_main_menu_about_me' was successful!")
+    @allure.feature("Тестирование страницы 'Главная'")
+    @allure.story("Проверка Ховер пункта 'Главная' при открытии главной страницы по url - psycholog-vam.ru.")
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.description("Проверка Ховер пункта 'Главная' при открытии главной страницы по url - psycholog-vam.ru.")
+    def test_main_menu_main_hover(self, homepage):
+        logger.info("Running the test 'test_main_menu_about_me_hover'")
+
+        actual_url = homepage.get_current_url()
+        active_element = (WebDriverWait(homepage.driver, 5)
+                          .until(EC.visibility_of_element_located((By.XPATH, "//li[@class='active']/a"))))
+        actual_href = active_element.get_attribute("href")
+        if actual_url == "https://psycholog-vam.ru/":
+            expected_url = "https://psycholog-vam.ru/index.php"
+        else:
+            expected_url = actual_url
+
+        try:
+            assert actual_href == expected_url, "Активный элемент меню не соответствует открытой странице"
+            logger.info("Test 'test_main_menu_main_hover' was successful!")
+        except AssertionError as e:
+            logger.error(f"Test 'test_main_menu_main_hover' failed with error: {e}")
+            raise
+
+    @allure.feature("Тестирование страницы 'Главная'")
+    @allure.story("Проверка Ховер пункта 'Главная' при открытии главной страницы с другой страницы.")
+    @allure.severity(allure.severity_level.CRITICAL)
+    @allure.description("Проверка Ховер пункта 'Главная' при открытии главной страницы с другой страницы.")
+    def test_main_menu_main_transition_hover(self, homepage):
+        logger.info("Running the test 'test_main_menu_main_transition_hover'")
+        homepage.checking_element_about_me()
+        element_menu_main = (WebDriverWait(homepage.driver, 5)
+                             .until(EC.visibility_of_element_located((By.XPATH, '//a[contains(text(), "Главная")]'))))
+        element_menu_main.click()
+
+        actual_url = homepage.get_current_url()
+        logger.info(f"Значение актуального URL: {actual_url}")
+        active_element = (WebDriverWait(homepage.driver, 5)
+                          .until(EC.visibility_of_element_located((By.XPATH, "//li[@class='active']/a"))))
+        actual_href = active_element.get_attribute("href")
+
+        if actual_url == "https://psycholog-vam.ru/":
+            expected_url = "https://psycholog-vam.ru/index.php"
+        else:
+            expected_url = actual_url
+
+        try:
+            assert actual_href == expected_url, f"Expected URL '{expected_url}', but got '{actual_href}'."
+            logger.info("Test 'test_main_menu_main_transition_hover' was successful!")
+        except AssertionError as e:
+            logger.error(f"test_main_menu_main_transition_hover' failed with error: {e}")
+            raise
+
+
+    @allure.feature("Тестирование меню Главной страницы 'HomePage'")
+    @allure.story("Проверка ховера на целевой странице 'Обо мне'.")
+    @allure.severity(allure.severity_level.MINOR)
+    @allure.description("Проверка наличия выделения цветом пункта меню текущей страницы.")
+    def test_main_menu_about_me_hover(self, homepage):
+        logger.info("Running the test 'test_main_menu_about_me_hover'")
+
+        homepage.checking_element_about_me()
+        expected_url = homepage.get_current_url()
+        active_element = (WebDriverWait(homepage.driver, 5)
+                        .until(EC.visibility_of_element_located((By.XPATH, "//li[@class='active']/a"))))
+        actual_href = active_element.get_attribute("href")
+
+        try:
+            assert actual_href == expected_url, "Активный элемент меню не соответствует открытой странице"
+            logger.info("Test 'test_main_menu_about_me_hover' was successful!")
+        except AssertionError as e:
+            logger.error(f"Test 'test_main_menu_about_me_hover' failed with error: {e}")
+            raise
+
 
     @allure.feature("Тестирование меню Главной страницы 'HomePage'")
     @allure.story("Проверка главного Меню - пункт 'Образование'")
@@ -52,10 +125,32 @@ class TestMainMenu:
 
         try:
             assert "Education" in homepage.get_title(), f"Переход не на ту страницу!"
+            logger.info("Test 'test_main_menu_education' was successful!")
         except AssertionError as e:
             logger.error(f"Test 'test_main_menu_education'  failed with error: {e}")
 
-        logger.info("Test 'test_main_menu_education' was successful!")
+
+
+    @allure.feature("Тестирование меню Главной страницы 'HomePage'")
+    @allure.story("Проверка ховера на целевой странице 'Образование'.")
+    @allure.severity(allure.severity_level.MINOR)
+    @allure.description("Проверка наличия выделения цветом пункта меню текущей страницы.")
+    def test_main_menu_education_hover(self, homepage):
+        logger.info("Running the test 'test_main_menu_education_hover'")
+
+        homepage.checking_element_menu_education()
+        expected_url = homepage.get_current_url()
+        active_element = (WebDriverWait(homepage.driver, 5)
+                          .until(EC.visibility_of_element_located((By.XPATH, "//li[@class='active']/a"))))
+        actual_href = active_element.get_attribute("href")
+        try:
+            assert actual_href == expected_url, "Активный элемент меню не соответствует открытой странице"
+            logger.info("Test 'test_main_menu_education_hover' was successful!")
+        except AssertionError as e:
+            logger.error(f"Test 'test_main_menu_education_hover' failed with error: {e}")
+
+
+
 
     @allure.feature("Тестирование меню Главной страницы 'HomePage'")
     @allure.story("Проверка главного Меню - пункт 'Публикации'")
@@ -68,11 +163,30 @@ class TestMainMenu:
 
         try:
             assert "Все публикации" in homepage.get_title(), f"Переход не на ту страницу!"
+            logger.info("Test 'test_main_menu_publications' was successful!")
         except AssertionError as e:
             logger.error(f"Test 'test_main_menu_publications' failed with error: {e}")
             raise
 
-        logger.info("Test 'test_main_menu_publications' was successful!")
+
+
+    @allure.feature("Тестирование меню Главной страницы 'HomePage'")
+    @allure.story("Проверка ховера на целевой странице 'Публикации'.")
+    @allure.severity(allure.severity_level.MINOR)
+    @allure.description("Проверка наличия выделения цветом пункта меню текущей страницы.")
+    def test_main_menu_publications_hover(self, homepage):
+        logger.info("Running the test 'test_main_menu_publications_hover'")
+
+        homepage.checking_element_menu_publications()
+        expected_url = homepage.get_current_url()
+        active_element = (WebDriverWait(homepage.driver, 5)
+                          .until(EC.visibility_of_element_located((By.XPATH, "//li[@class='active']/a"))))
+        actual_href = active_element.get_attribute("href")
+        try:
+            assert actual_href == expected_url, "Активный элемент меню не соответствует открытой странице"
+            logger.info("Test 'test_main_menu_publications_hover' was successful!")
+        except AssertionError as e:
+            logger.error(f"Test 'test_main_menu_publications_hover' failed with error: {e}")
 
     @allure.feature("Тестирование меню Главной страницы 'HomePage'")
     @allure.story("Проверка главного Меню - пункт 'Контакты'")
