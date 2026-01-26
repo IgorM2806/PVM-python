@@ -1,6 +1,0 @@
-2026-01-09 15:26:57,095 [INFO ] (logger.py:11) - ====== WebDriver manager ======
-2026-01-09 15:26:57,779 [INFO ] (logger.py:11) - Get LATEST chromedriver version for google-chrome
-2026-01-09 15:26:58,105 [INFO ] (logger.py:11) - Get LATEST chromedriver version for google-chrome
-2026-01-09 15:26:58,453 [INFO ] (logger.py:11) - Driver [C:\Users\User\.wdm\drivers\chromedriver\win64\143.0.7499.192\chromedriver-win32/chromedriver.exe] found in cache
-2026-01-09 15:27:00,239 [INFO ] (test_checking_navigation_elements.py:138) - Running the test 'test_checking_button_up_futter'.
-2026-01-09 15:27:03,346 [INFO ] (test_checking_navigation_elements.py:149) - Test 'test_checking_button_up_futter' was successful!
